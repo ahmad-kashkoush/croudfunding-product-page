@@ -16,3 +16,4 @@
 .prettierignoredist
 .cache
 node_modules
+dist
