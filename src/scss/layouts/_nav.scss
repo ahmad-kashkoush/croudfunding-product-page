@@ -1,9 +1,4 @@
 @use "abstracts" as *;
-@mixin maxMobile {
-  @media (max-width: $screen) {
-    @content;
-  }
-}
 
 nav {
   display: flex;
@@ -22,9 +17,7 @@ nav {
   }
 }
 // mobile
-@function secondary($key) {
-  @return map-get($secondary, $key);
-}
+
 nav {
   @include desktop {
     gap: 1rem;
