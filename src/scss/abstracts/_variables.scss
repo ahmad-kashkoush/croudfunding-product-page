@@ -16,12 +16,13 @@ $accent: (
   "200": $Dark-cyan,
 );
 $links-color: white;
+// ------------[Screens]-----------
+$screen: 600px;
 //---------[text]------------
 $font-size: 16px;
 $font-family: "Commissioner", sans-serif;
 
 // ---------[Hamburger Menu Variables]---------
-
 $Hamburger: (
   "bar-width": 30px,
   "bar-height": 3px,

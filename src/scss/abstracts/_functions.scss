@@ -1,4 +1,4 @@
-$screen: 600px;
+//-----------[screen widths]--------
 @mixin desktop {
   @media (min-width: $screen) {
     @content;
@@ -9,4 +9,14 @@ $screen: 600px;
   @media (min-width: $screen) {
     @content;
   }
+}
+@mixin maxMobile {
+  @media (max-width: $screen) {
+    @content;
+  }
+}
+
+//-----------[colors]--------
+@function secondary($key) {
+  @return map-get($secondary, $key);
 }
