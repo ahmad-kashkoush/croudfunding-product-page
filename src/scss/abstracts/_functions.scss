@@ -1,0 +1,12 @@
+$screen: 600px;
+@mixin desktop {
+  @media (min-width: $screen) {
+    @content;
+  }
+}
+
+@mixin mediaScreen($screen) {
+  @media (min-width: $screen) {
+    @content;
+  }
+}

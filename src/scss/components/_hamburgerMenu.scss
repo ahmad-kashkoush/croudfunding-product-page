@@ -1,0 +1,53 @@
+@use "abstracts" as *;
+
+.ham {
+  /* Styling */
+  display: flex;
+  flex-direction: column;
+  gap: hm(bar-gap);
+  width: max-content;
+
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+  @include desktop {
+    display: none;
+  }
+}
+.ham::before,
+.ham::after,
+.ham input {
+  content: "";
+  width: hm(bar-width);
+  height: hm(bar-height);
+  background-color: hm(foreground);
+  transition: opacity hm(animation-timing), width hm(animation-timing),
+    rotate hm(animation-timing), background-color hm(animation-timing),
+    translate hm(animation-timing);
+  transform-origin: left center;
+}
+.ham input {
+  appearance: none;
+  outline: none;
+  pointer-events: none;
+}
+.ham:has(input:checked)::before {
+  rotate: 45deg;
+  width: hm(x-width);
+  translate: 0 calc(hm(bar-height) / -2);
+}
+.ham:has(input:checked)::after {
+  rotate: -45deg;
+  width: hm(x-width);
+  translate: 0 calc(hm(bar-height) / 2);
+}
+
+.ham input:checked {
+  opacity: 0;
+  width: 0;
+}
+
+.ham:has(input:checked) + nav {
+  z-index: 1;
+  display: flex;
+}
