@@ -14,9 +14,11 @@ a {
 body {
   font-family: $font-family;
 }
-h1 {
+h1,
+.h1-style {
   font-size: 26px;
   color: secondary("200");
+  font-weight: 700;
   @include desktop {
     font-size: 30px;
   }
