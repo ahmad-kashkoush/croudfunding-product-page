@@ -11,6 +11,11 @@
     @content;
   }
 }
+@mixin mediaScreenMx($screen) {
+  @media (max-width: $screen) {
+    @content;
+  }
+}
 @mixin maxMobile {
   @media (max-width: $screen-width) {
     @content;

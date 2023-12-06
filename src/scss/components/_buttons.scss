@@ -3,12 +3,14 @@
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 15px 14px;
-  border-radius: 20px;
+  width: 140px;
+  height: 45px;
+  border-radius: 104px;
   font-weight: 600;
   @include desktop {
     padding-left: 23px;
     padding-right: 23px;
+    width: 164px;
   }
 }
 
@@ -23,12 +25,30 @@
 .intro-card .btn-bookmark {
   position: relative;
   color: hsl(0, 0%, 48%);
-  padding-left: 36px;
+
+  @include mediaScreenMx(400px) {
+    // display: none;
+    padding: 0px;
+    background-color: transparent;
+    width: fit-content;
+  }
 }
+.intro-card .btn-bookmark span {
+  display: inline;
+  @include mediaScreenMx(400px) {
+    display: none;
+  }
+}
+
 .intro-card .btn-bookmark img {
   position: absolute;
   left: 7px;
   top: 0;
   translate: -50%;
   width: 44px;
+  @include mediaScreenMx(400px) {
+    position: relative;
+    translate: 0;
+    left: 0;
+  }
 }

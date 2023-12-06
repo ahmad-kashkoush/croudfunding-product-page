@@ -29,7 +29,7 @@ nav a {
   @include maxMobile {
     color: secondary("200");
     padding: 1rem 1rem 1rem 1rem;
-    border-bottom: 1px solid hsl(0deg 0% 84.98%);
+    border-bottom: 1px solid $border-color;
   }
   @include desktop {
     color: $links-color;
