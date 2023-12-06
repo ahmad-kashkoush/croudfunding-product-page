@@ -1,0 +1,73 @@
+@use "abstracts" as *;
+
+main {
+  padding-bottom: 10rem;
+  position: absolute;
+  width: 90%;
+  top: 319px;
+  left: 50%;
+  max-width: 800px;
+
+  transform: translateX(-50%);
+}
+
+.intro-card > img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50% -50%;
+  width: 65px;
+}
+// todo generalize after finishing
+.intro-card h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
+.intro-card p {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.intro-card .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+//  buttons are in button component
+.card:not(:first-of-type) {
+  margin-top: 1.5rem;
+}
+.card-progress {
+}
+.card-progress .content {
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+.card-progress .item {
+  width: fit-content;
+  align-self: center;
+  margin-top: 1rem;
+  @include desktop {
+    width: 100%;
+  }
+}
+.card-progress .item:nth-of-type(2) {
+  border: 1px solid;
+  padding: 1.5rem;
+  border-color: $border-color transparent;
+  @include desktop {
+    border-color: transparent $border-color;
+    padding: 0;
+  }
+}
+.card-progress .item h1 {
+  text-align: center;
+}
+.card-progress .item p {
+  text-align: center;
+  margin-top: 1rem;
+}

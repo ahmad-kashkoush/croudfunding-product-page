@@ -1,6 +1,7 @@
+@use "variables" as *;
 //-----------[screen widths]--------
 @mixin desktop {
-  @media (min-width: $screen) {
+  @media (min-width: $screen-width) {
     @content;
   }
 }
@@ -10,8 +11,13 @@
     @content;
   }
 }
-@mixin maxMobile {
+@mixin mediaScreenMx($screen) {
   @media (max-width: $screen) {
+    @content;
+  }
+}
+@mixin maxMobile {
+  @media (max-width: $screen-width) {
     @content;
   }
 }
@@ -19,4 +25,7 @@
 //-----------[colors]--------
 @function secondary($key) {
   @return map-get($secondary, $key);
+}
+@function accent($key) {
+  @return map-get($accent, $key);
 }
