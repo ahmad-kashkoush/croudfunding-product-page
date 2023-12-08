@@ -1,7 +1,7 @@
 import bookmarkView from "./views/bookmarkView";
 import modalView from "./views/modalView";
 import modalButtons from "./views/modalButtons";
-
+import { cardSelect } from "./views/cardsToSelect";
 
 
 //  Open Close modals
@@ -33,13 +33,8 @@ const handleModalClose = function (closers) {
     })
 }
 //  Select 
-const handleSelect = function () {
-    const resetSelected = () => {
-        document.querySelectorAll(".modal .card-nested").forEach(card => {
-            card.classList.remove("selected");
-            card.querySelector("input").checked = false;
-        });
-    }
+
+const handleSelectButtons = function () {
     const btns = document.querySelectorAll(".btn-select");
     btns.forEach(btn => {
         btn.addEventListener("click", function (e) {
@@ -47,22 +42,18 @@ const handleSelect = function () {
             modalView.open();
             const cardNumber = e.target.dataset.cardNumber;
             const cardToSelect = document.querySelector(`.modal div[data-card-number="${cardNumber}"]`);
-            if (!cardToSelect) return;
-            resetSelected();
-            cardToSelect.classList.add("selected");
-            cardToSelect.querySelector("input").checked = true;
+            cardSelect.select(cardNumber, cardToSelect);
 
         })
     })
+}
+const handleSelectRadios = function () {
     const radios = document.querySelectorAll(".modal .card-nested");
     radios.forEach(radio => {
         radio.addEventListener('change', function (e) {
             e.preventDefault();
-            resetSelected();
             const cardToSelect = e.target.closest(".card-nested");
-            if (!cardToSelect) return;
-            cardToSelect.classList.add("selected");
-            cardToSelect.querySelector("input").checked = true;
+            cardSelect.select(-1, cardToSelect);
 
         })
     })
@@ -75,7 +66,8 @@ const init = function () {
     bookmarkView.handler();
     modalButtons.addHandlerModalOpen(handleModalOpen)
     modalButtons.addHandlerModalClose(handleModalClose);
-    handleSelect();
+    handleSelectButtons();
+    handleSelectRadios();
 
 
 }
