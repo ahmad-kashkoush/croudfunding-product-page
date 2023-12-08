@@ -10,12 +10,13 @@
 .card-about > p:nth-of-type(2) {
   margin-bottom: 2rem;
 }
-.card-about .card-nested {
-  box-shadow: none;
+.card-nested {
+  box-shadow: none !important;
   border: 1px solid rgba(secondary("100"), 0.6);
   margin-top: 1.5rem;
+  border-radius: inherit;
 }
-.card-about .card-nested .row {
+.card-nested .row {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -31,15 +32,15 @@
     margin-top: 1.5rem;
   }
 }
-.card-about .card-nested h2 {
+.card-nested h2 {
   font-size: 24px;
 }
-.card-about .card-nested .first-row span {
+.pledge {
   color: accent("100");
   font-weight: 500;
 }
 
-.card-about .card-nested .col-1 {
+.card-nested .col-1 {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -48,9 +49,9 @@
   margin-top: 0;
 }
 
-.card-about .card-nested-suspended {
+.card-nested-suspended {
   opacity: 0.5;
 }
-.card-about .card-nested-suspended .btn-accent {
+.card-nested-suspended .btn-accent {
   background-color: rgba(secondary("100"), 0.6);
 }

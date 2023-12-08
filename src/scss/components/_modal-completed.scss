@@ -1,0 +1,33 @@
+@use "abstracts" as *;
+// modal completed
+.modal-completed {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 340px;
+  max-width: 100%;
+  text-align: center;
+}
+.modal-completed .img-wrapper {
+  position: relative;
+  height: 100px;
+  width: 200px;
+  // margin-bottom: 10px;
+}
+.modal-completed .img-wrapper img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: 3% -50%;
+  width: 84px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal-completed p,
+.modal-completed h2,
+.modal-completed button {
+  margin-top: 1rem;
+}

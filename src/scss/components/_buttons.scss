@@ -39,7 +39,6 @@
     display: none;
   }
 }
-
 .intro-card .btn-bookmark img {
   position: absolute;
   left: 7px;
@@ -51,4 +50,16 @@
     translate: 0;
     left: 0;
   }
+}
+.intro-card .btn-not-bookmarked .img-bookmarked {
+  display: none;
+}
+.intro-card .btn-bookmarked {
+  color: accent("100");
+  &:hover {
+    color: accent("200");
+  }
+}
+.intro-card .btn-bookmarked .img-not-bookmarked {
+  display: none;
 }
