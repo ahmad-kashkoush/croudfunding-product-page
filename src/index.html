@@ -107,7 +107,9 @@
               <span class="h1-style"> 101</span>
               <p>left</p>
             </div>
-            <button class="btn btn-accent">Select Reward</button>
+            <button class="btn btn-accent btn-select" data-card-number="1">
+              Select Reward
+            </button>
           </div>
         </div>
         <div class="card card-nested">
@@ -125,7 +127,7 @@
               <span class="h1-style"> 64</span>
               <p>left</p>
             </div>
-            <button class="btn btn-accent modal-open-completed">
+            <button data-card-number="2" class="btn btn-accent btn-select">
               Select Reward
             </button>
           </div>
@@ -145,7 +147,7 @@
               <span class="h1-style"> 0</span>
               <p>left</p>
             </div>
-            <button class="btn btn-accent">Out of Stock</button>
+            <button class="btn btn-accent btn-suspended">Out of Stock</button>
           </div>
         </div>
       </section>
@@ -154,7 +156,7 @@
     <main class="modal modal-default card card-about d-none">
       <h1>Back this project</h1>
       <img
-        class="modal-open-completed"
+        class="btn-modal-close"
         src="../images/icon-close-modal.svg"
         alt=""
       />
@@ -179,7 +181,7 @@
         </div>
       </div>
       <!-- !Card 2 -->
-      <div class="card card-nested">
+      <div data-card-number="1" class="card card-nested">
         <div class="wrapper">
           <input type="radio" name="group1" id="radio2" />
           <div class="content">
@@ -214,11 +216,11 @@
       </div>
       <!-- ! END CARD -->
       <!-- !Card 3-->
-      <div class="card card-nested">
+      <div data-card-number="2" class="card card-nested">
         <div class="wrapper">
-          <input type="radio" name="group1" id="radio2" />
+          <input type="radio" name="group1" id="radio3" />
           <div class="content">
-            <label for="radio2">
+            <label for="radio3">
               <h2>Black Edition Stand</h2>
             </label>
             <span class="pledge"> Pledge $75 or more</span>
@@ -251,9 +253,9 @@
       <!-- !Card 4-->
       <div class="card card-nested card-nested-suspended">
         <div class="wrapper">
-          <input type="radio" name="group1" id="radio2" />
+          <input type="radio" name="group1" id="radio4" />
           <div class="content">
-            <label for="radio2">
+            <label for="radio4">
               <h2>Mahogany Special Edition</h2>
             </label>
             <span class="pledge"> Pledge $200 or more</span>
@@ -294,7 +296,9 @@
         Monitor Riser worldwide. You will get an email once our campaign is
         completed.
       </p>
-      <button class="btn btn-accent modal-close">Got it!</button>
+      <button class="btn btn-accent btn-modal-close btn-modal-close-completed">
+        Got it!
+      </button>
     </div>
     <div class="overlay d-none"></div>
   </body>
