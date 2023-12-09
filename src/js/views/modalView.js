@@ -6,9 +6,12 @@ class ModalView {
         this.modalCompleted = document.querySelector('.modal-completed');
     }
     open(isModalCompleted = false) {
+        this.close();
+        this.close(true);
+
         this.overlay.classList.remove('d-none');
         if (isModalCompleted)
-            this.modalCompleted.remove('d-none');
+            this.modalCompleted.classList.remove('d-none');
         else
             this.modal.classList.remove('d-none');
     }

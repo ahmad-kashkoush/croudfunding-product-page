@@ -9,15 +9,18 @@ import cardSelect from "./views/cardsToSelect";
 const closeModal = function (e) {
     e.preventDefault();
     const ele = e.target.closest('.btn-modal-close-completed');
-    let notCompleted = !ele;
-    modalView.close(!notCompleted);
+    const isCompleted = true && ele;
+    modalView.close(isCompleted);
 }
 const openModal = function (e) {
     e.preventDefault();
-    modalView.open();
+    const ele = e.target.closest('.btn-modal-open-completed');
+    const isCompleted = true && ele;
+    modalView.open(isCompleted);
 
 }
 const handleModalOpen = function (openners) {
+    console.log(openners);
     openners.forEach(opener => {
         opener.addEventListener("click", openModal)
     })
@@ -27,10 +30,14 @@ const handleModalClose = function (closers) {
     closers.forEach(closer => {
         closer.addEventListener("click", closeModal);
     });
+
     document.addEventListener("keydown", function (e) {
 
-        if (e.key === "Escape")
+        if (e.key === "Escape") {
             closeModal(e);
+            modalView.close(true);
+        }
+
     })
 }
 //  Select 
