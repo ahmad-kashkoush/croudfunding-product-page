@@ -1,7 +1,8 @@
+'use strict ';
 import bookmarkView from "./views/bookmarkView";
 import modalView from "./views/modalView";
 import modalButtons from "./views/modalButtons";
-import { cardSelect } from "./views/cardsToSelect";
+import cardSelect from "./views/cardsToSelect";
 
 
 //  Open Close modals
@@ -27,7 +28,7 @@ const handleModalClose = function (closers) {
         closer.addEventListener("click", closeModal);
     });
     document.addEventListener("keydown", function (e) {
-        e.preventDefault();
+
         if (e.key === "Escape")
             closeModal(e);
     })
@@ -59,6 +60,7 @@ const handleSelectRadios = function () {
     })
 
 }
+
 
 
 
