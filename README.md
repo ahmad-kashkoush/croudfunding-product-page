@@ -31,6 +31,8 @@ Users should be able to:
 
 ### Screenshot
 
+![Desktop Design](image.png) ![Mobile Design](image-1.png)
+
 ### Links
 
 - Solution URL: https://github.com/ahmad-kashkoush/croudfunding-product-page
